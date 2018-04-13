@@ -80,11 +80,6 @@ inputs:
     format: edam:format_2572
     inputBinding:
       prefix: '-i'
-      valueFrom: |
-        ${
-          var prefix = ((/.*\.bam$/i).test(inputs.input.path))?'-ibam':'-i';
-          return [prefix,inputs.input.path];
-        }
   fq:
     type: string
     inputBinding:
