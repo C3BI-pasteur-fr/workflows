@@ -68,9 +68,6 @@ inputs:
       read tag to strip (repeatable) [null]
   input:
     type: File
-    format:
-    - edam:format_2572
-    - edam:format_2573
     inputBinding:
       position: 4
 
@@ -181,9 +178,6 @@ inputs:
 outputs:
   output:
     type: File
-    format:
-    - edam:format_2572
-    - edam:format_2573
     outputBinding:
       glob: $(inputs.output_name)
 

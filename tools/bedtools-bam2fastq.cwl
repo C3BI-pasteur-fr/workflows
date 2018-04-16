@@ -77,7 +77,6 @@ baseCommand: [bedtools, bamtofastq]
 inputs:
   input:
     type: File
-    format: edam:format_2572
     inputBinding:
       prefix: '-i'
   fq:
