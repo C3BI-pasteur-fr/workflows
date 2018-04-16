@@ -27,7 +27,6 @@ $namespaces:
   doap: http://usefulinc.com/ns/doap#
   adms: http://www.w3.org/ns/adms#
   dcat: http://www.w3.org/ns/dcat#
-  edam: http://edamontology.org/
 
 $schemas:
 - http://dublincore.org/2012/06/14/dcterms.rdf
