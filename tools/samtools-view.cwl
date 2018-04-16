@@ -3,9 +3,15 @@
 cwlVersion: v1.0
 class: CommandLineTool
 
-requirements:
-- $import: samtools-docker.yml
-- class: InlineJavascriptRequirement
+#requirements:
+#- $import: samtools-docker.yml
+#- class: InlineJavascriptRequirement
+
+hints:
+  SoftwareRequirement:
+    packages:
+      samtools:
+        version: ["1.6"]
 
 inputs:
   isbam:
