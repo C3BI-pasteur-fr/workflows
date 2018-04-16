@@ -17,7 +17,7 @@ outputs:
 
 steps:
   extract_unmapped:
-    run: ../tools/samtools-view.cwl
+    run: ../../tools/samtools-view.cwl
     in:
       input: align_file
       isbam: true
@@ -26,7 +26,7 @@ steps:
     out: [unmapped_reads]
 
   bamtofastq:
-    run: ../tools/bedtools-bam2fastq.cwl
+    run: ../../tools/bedtools-bam2fastq.cwl
     in:
       input: extract_unmapped/unmapped_reads
       fq: unmapped_R1.fq
