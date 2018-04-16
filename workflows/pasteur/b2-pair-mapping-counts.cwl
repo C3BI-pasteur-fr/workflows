@@ -4,9 +4,10 @@ cwlVersion: v1.0
 class: Workflow
 
 inputs:
-  # Input BAM file (with unmapped reads)
+  # Input files
   r1: File
   r2: File
+  b2index: string
 
   # bowtie2
   bowtie2_mismatch: int
@@ -25,6 +26,7 @@ steps:
   mapping:
     run: ../../tools/bowtie2.cwl
     in:
+      index: bt2index
       fq1: r1
       fq2: r2
       output_name: sam_name
