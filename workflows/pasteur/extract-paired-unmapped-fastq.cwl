@@ -7,7 +7,8 @@ inputs:
   # Input BAM file (with unmapped reads)
   align_file: File
 
-  # samtools view parameters
+  # samtools view 
+  samtools_outputbam: bool
   samtools_keep_flag: int
   samtools_outname: string
 
@@ -28,7 +29,7 @@ steps:
     run: ../../tools/samtools-view.cwl
     in:
       input: align_file
-      isbam: true
+      isbam: samtools_outputbam
       readswithbits: samtools_keep_flag # read unmapped and mate unmapped
       output_name: samtools_outname
     out: [output]
@@ -36,7 +37,7 @@ steps:
   bamtofastq:
     run: ../../tools/bedtools-bam2fastq.cwl
     in:
-      input: extract_unmapped/unmapped_reads
+      input: extract_unmapped/output
       fq: fqr1
       fq2: fqr2
     out: [fastq_r1, fastq_r2]
