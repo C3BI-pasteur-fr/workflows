@@ -19,7 +19,7 @@ hints:
       bowtie2:
         version: ["2.1.0"]
 
-baseCommand: bowtie2-build
+baseCommand: bowtie2
 
 inputs:
   # Input and output files
