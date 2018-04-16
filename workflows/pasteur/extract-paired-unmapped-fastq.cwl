@@ -8,7 +8,7 @@ inputs:
   align_file: File
 
   # samtools view 
-  samtools_outputbam: bool
+  samtools_outputbam: boolean
   samtools_keep_flag: int
   samtools_outname: string
 
