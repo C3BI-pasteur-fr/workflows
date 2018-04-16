@@ -186,7 +186,7 @@ outputs:
 baseCommand: [samtools, view]
 $namespaces:
   s: http://schema.org/
-  edam: edam: https://edamontology.org/
+  edam: https://edamontology.org/
 
 $schemas:
 - http://schema.org/docs/schema_org_rdfa.html
