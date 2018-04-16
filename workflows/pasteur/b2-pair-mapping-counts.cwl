@@ -17,6 +17,13 @@ inputs:
   samtools_outputbam: boolean
   samtools_outname: string
 
+  # featureCounts
+  fc_annot: File
+  fc_outname: string
+  fc_feature: string
+  fc_attrib: string
+  fc_paired: boolean
+
 outputs:
   bam:
     type: File
@@ -39,3 +46,14 @@ steps:
       output_name: samtools_outname
       isbam: samtools_outputbam
     out: [output]
+
+  counting:
+    run: ../../tools/featurecounts.cwl
+    in:
+      input: samtobam/output
+      annotation: fc_annot
+      output_name: fc_outname
+      feature_type: fc_feature
+      attribute_type: fc_attrib
+      count_fragments: fc_paired
+    out: [counts, summary]
