@@ -8,19 +8,20 @@ inputs:
   align_file: File
 
   # samtools view parameters
-  samtools_outname: "unmapped.bam"
+  samtools_keep_flag: int
+  samtools_outname: string
 
   # bedtools bam2fastq parameters
-  fqr1: "unmapped_R1.fq"
-  fqr2: "unmapped_R2.fq"
+  fqr1: string
+  fqr2: string
 
 outputs:
   fastq_R1:
     type: File
-    outputSource: bamtofastq/fq1
+    outputSource: bamtofastq/fastq_r1
   fastq_R2:
     type: File
-    outputSource: bamtofastq/fq2
+    outputSource: bamtofastq/fastq_r2
 
 steps:
   extract_unmapped:
@@ -28,7 +29,7 @@ steps:
     in:
       input: align_file
       isbam: true
-      readswithbits: 12 # read unmapped and mate unmapped
+      readswithbits: samtools_keep_flag # read unmapped and mate unmapped
       output_name: samtools_outname
     out: [output]
 
