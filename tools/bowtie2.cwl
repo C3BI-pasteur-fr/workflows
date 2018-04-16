@@ -24,7 +24,7 @@ baseCommand: bowtie2-build
 inputs:
   # Input and output files
   index:
-    type: File
+    type: string
     label: Index name of reference genome
     inputBinding:
       prefix: '-x'
