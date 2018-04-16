@@ -26,7 +26,7 @@ steps:
   mapping:
     run: ../../tools/bowtie2.cwl
     in:
-      index: bt2index
+      index: b2index
       fq1: r1
       fq2: r2
       output_name: sam_name
