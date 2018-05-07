@@ -18,6 +18,9 @@ hints:
     packages:
       salmon:
         version: ["0.8.2"]
+  ResourceRequirement:
+    ramMin: $(inputs.memory)
+    coresMin: $(inputs.runThreadN)
 
 baseCommand: [salmon, quant]
 
@@ -58,10 +61,15 @@ inputs:
       prefix: --output
   # - Advanced parameters
   runThreadN:
-    type: int?
+    type: int
+    default: 1
     label: Number of threads to run Salmon
     inputBinding:
       prefix: --runThreadN
+  memory:
+    type: int
+    default: 4096
+    label: Memory to allocate while submitting job
 
 outputs:
   #align_reads:
