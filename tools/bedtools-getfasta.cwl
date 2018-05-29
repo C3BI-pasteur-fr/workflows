@@ -52,17 +52,17 @@ adms:includedAsset:
     - class: foaf:Organization
       foaf:name: Center for Public Health Genomics, University of Virginia, Charlottesville,
         VA 22908, USA
-doap:name: bedtools-genomecov.cwl
-dcat:downloadURL: https://github.com/common-workflow-language/workflows/blob/master/tools/bedtools-genomecov.cwl
+doap:name: bedtools-getfasta.cwl
+dcat:downloadURL: https://github.com/C3BI-pasteur-fr/workflows/edit/master/tools/bedtools-getfasta.cwl
 doap:maintainer:
 - class: foaf:Organization
-  foaf:name: Barski Lab, Cincinnati Children's Hospital Medical Center
+  foaf:name: Bioinformatics and Biostatistics HUB, C3BI (USR 3756 Institut Pasteur et CNRS), Paris, France
   foaf:member:
   - class: foaf:Person
-    id: http://orcid.org/0000-0001-9102-5681
-    foaf:openid: http://orcid.org/0000-0001-9102-5681
-    foaf:name: Andrey Kartashov
-    foaf:mbox: mailto:Andrey.Kartashov@cchmc.org
+    id: https://orcid.org/0000-0002-6517-6934
+    foaf:openid: https://orcid.org/0000-0002-6517-6934
+    foaf:name: Kenzo-Hugo Hillion
+    foaf:mbox: mailto:kenzo-hugo.hillion1@pasteur.fr
 
 hints:
   SoftwareRequirement:
